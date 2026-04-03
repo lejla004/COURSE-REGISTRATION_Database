@@ -1,0 +1,202 @@
+{
+  "info": {
+    "_postman_id": "d293b363-dd8a-488f-a5b2-114e3fb4dd77",
+    "name": "course_registration",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51407697",
+    "_collection_link": "https://go.postman.co/collection/51407697-d293b363-dd8a-488f-a5b2-114e3fb4dd77?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get Students",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetStudentbyID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/students/23100101",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students",
+            "23100101"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GETallcourses",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/courses",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "courses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET_all_requests",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/enrollments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "enrollments"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST_enrollment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"student_id\": \"23100101\",\r\n  \"course_code\": \"CS201\",\r\n  \"prof_id\": 1,\r\n  \"grade_point\": 90,\r\n  \"year\": 2025\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/enrollments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "enrollments"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update_mail",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"lejla.newemail@student.ba\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/students/23100101",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students",
+            "23100101"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "add_student",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Amir\",\r\n  \"last_name\": \"Hadzic\",\r\n  \"email\": \"amir.hadzic@student.ba\",\r\n  \"dob\": \"2004-02-15\",\r\n  \"dor\": \"2026-04-03\",\r\n  \"faculty\": 10,\r\n  \"dep_id\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/students/23100101",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students",
+            "23100101"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
