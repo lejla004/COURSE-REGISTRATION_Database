@@ -32,7 +32,7 @@ It’s built with **Node.js**, **Express**, and **MySQL**, and you can test it e
 git clone https://github.com/lejla004/COURSE-REGISTRATION_Database.git
 cd COURSE-REGISTRATION_Database
 
-2. **Install dependencies**
+2. Install dependencies
 npm install
 
 
