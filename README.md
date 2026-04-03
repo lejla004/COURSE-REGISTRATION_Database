@@ -1,87 +1,67 @@
 # Course Registration API
 
-Welcome! This is a simple API for managing **students**, **courses**, and **enrollments** at a university.  
-It’s built with **Node.js**, **Express**, and **MySQL**, and you can test it easily using **Postman**.
+A RESTful API for managing **students**, **courses**, and **enrollments** at a university.
+Built with **Node.js**, **Express**, and **MySQL**.
 
 ---
 
-## Features
+## Getting Started
 
-### Students
-- Get all students or a single student by ID
-- Add a new student
-- Update student information
-- Delete a student (note: foreign key constraints may prevent deletion if the student has enrollments)
+### Prerequisites
 
-### Courses
-- Get all courses or a course by code
+- [Node.js](https://nodejs.org/) (v14+)
+- MySQL database
+- [Postman](https://www.postman.com/downloads/) (optional, for testing)
 
-### Enrollments
-- Get all enrollments with student and course info
-- Add a new enrollment
-- Update enrollment details
-- Delete an enrollment
+### Installation
 
----
-
-## Setup
-
-1. **Clone this repository**
-
+**1. Clone the repository**
 ```bash
 git clone https://github.com/lejla004/COURSE-REGISTRATION_Database.git
 cd COURSE-REGISTRATION_Database
+```
 
-2. Install dependencies
+**2. Install dependencies**
+```bash
 npm install
+```
 
+**3. Configure environment variables**
 
-3.**Create a .env file in the project root with your database credentials:**
+Create a `.env` file in the project root:
+```env
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_password
 DB_NAME=courseregistration
 PORT=3000
+```
 
-4. **Start the server**
+**4. Start the server**
+```bash
 node server.js
+```
 
-
-## Testing with Postman – Step by Step
-
-You can use **Postman** to explore and test the API. Here's a simple guide:
+The API will be running at `http://localhost:3000`.
 
 ---
 
-### 1. Install Postman
-- Download Postman from [https://www.postman.com/downloads/](https://www.postman.com/downloads/)
-- Install and open the application.
+## API Endpoints
 
----
+## Testing with Postman
 
-### 2. Create a New Collection
-1. Click **Collections** on the left panel.
-2. Click **+ New Collection**.
-3. Name it something like `Course Registration API`.
-4. (Optional) Add a description: `Collection of requests to test students, courses, and enrollments endpoints`.
+### Setup
 
----
+1. Download and install [Postman](https://www.postman.com/downloads/).
+2. Open Postman and click **Collections → + New Collection**.
+3. Name it `Course Registration API`.
 
-### 3. Add Requests
-For each API endpoint, create a request in the collection:
+GET http://localhost:3000/students
+#### Add a New Student
 
-#### Example: Get all students
-- Click **Add Request** in your collection.
-- Name it `Get All Students`.
-- Method: `GET`
-- URL: `http://localhost:3000/students`
-- Click **Save** to your collection.
-
-#### Example: Add a new student
-- Method: `POST`
-- URL: `http://localhost:3000/students`
-- Go to **Body → raw → JSON** and enter:
-
+POST http://localhost:3000/students
+Content-Type: application/json
+Request body:
 ```json
 {
   "name": "Lejla",
@@ -92,4 +72,15 @@ For each API endpoint, create a request in the collection:
   "faculty": "Computer Science",
   "dep_id": 1
 }
+```
 
+In Postman: go to **Body → raw → JSON**, paste the above, and click **Send**.
+
+---
+
+
+
+
+## License
+
+This project is for educational purposes.
